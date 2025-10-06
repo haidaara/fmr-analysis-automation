@@ -1,0 +1,30 @@
+# Core Python scientific stack
+numpy
+scipy
+pandas
+
+# Plotting
+matplotlib
+
+# Jupyter notebook support
+jupyter
+ipykernel
+
+# For exporting to Excel (used in your notebook description)
+openpyxl
+xlsxwriter
+
+# For exporting and manipulating pptx files (merging plots to pptx)
+python-pptx
+
+# Optional: tqdm for progress bars during automation
+tqdm
+
+# Optional: YAML config support
+pyyaml
+
+# Optional: Interactive widgets in notebooks (if needed)
+ipywidgets
+
+# If you use scikit-learn for fitting or metrics
+scikit-learn
