@@ -1,0 +1,8 @@
+# FMR Analysis Automation Configuration
+
+data_folder: "data"
+results_root: "results_roots"
+samples: []           # Leave empty to process all samples, or specify: ["AZ5", ...]
+plot_format: "png"    # "png" or "svg"
+aggregate: "median"   # "mean" or "median" for plotting/aggregation
+fit_model: "double_asymmetric_lorentzian"  # Default fitting model

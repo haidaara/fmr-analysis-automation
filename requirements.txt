@@ -28,3 +28,6 @@ ipywidgets
 
 # If you use scikit-learn for fitting or metrics
 scikit-learn
+
+# For exporting and manipulating pptx files (merging plots to pptx)
+python-pptx

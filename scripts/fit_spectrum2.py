@@ -112,7 +112,7 @@ def fit_spectrum(
     processed_file=None,
     sample="AZ5",
     results_root="results_roots",
-    fitting_model='asymmetric_lorentzian',     # default to asymmetric (as requested)
+    fitting_model='double_asymmetric_lorentzian',     # default to asymmetric (as requested)
     aggregate='median',                        # 'median' | 'mean' | None/'none'/False
     save_plot=True,
     show_plot=True,
