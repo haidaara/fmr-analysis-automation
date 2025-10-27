@@ -4,8 +4,11 @@
 # ---[ Input & File Selection ]---
 input_file: ""
 data_folder: "data"
-samples:
-  - AZ9
+
+# comment to analyze all samples in data_folder 
+# samples:
+#   - AZ9
+
 results_root: "results_roots"
 
 # ---[ Model & Fitting ]---
