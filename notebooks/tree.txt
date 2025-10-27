@@ -1,0 +1,453 @@
+.
+├── README.md
+├── config.yaml
+├── data
+│   ├── AZ10_Final (7-10-25)
+│   │   ├── AZ10_f10GHz_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f11GHz_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f12GHz_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f13GHz_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f14GHz_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f15GHz_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f16GHz_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f17GHz_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f3_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f4GHz_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f5_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f6_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ10_f7GHz_m10dB_sens200_3.00Vpp_final
+│   │   ├── AZ10_f8GHz_m10dB_sens50_2.500Vpp_Final
+│   │   └── AZ10_f9GHz_m10dB_sens50_2.500Vpp_Final
+│   ├── AZ11_scrchd
+│   │   ├── AZ11_f3GHz_m10dB
+│   │   └── AZ11_f3GHz_m10dB_2
+│   ├── AZ12_Final (29-09-25)
+│   │   ├── AZ12_f10GHz_m10dB_2repeat
+│   │   ├── AZ12_f11GHz_m10dB_2repeat
+│   │   ├── AZ12_f12GHz_m10dB_2repeat
+│   │   ├── AZ12_f13GHz_m10dB_2repeat
+│   │   ├── AZ12_f14GHz_m10dB_2repeat
+│   │   ├── AZ12_f15GHz_m10dB_2repeat
+│   │   ├── AZ12_f16GHz_m10dB_2repeat
+│   │   ├── AZ12_f17GHz_m10dB_2repeat
+│   │   ├── AZ12_f4GHz_m10dB_2
+│   │   ├── AZ12_f5GHz_m10dB_2
+│   │   ├── AZ12_f6GHz_m10dB_2
+│   │   ├── AZ12_f7GHz_m10dB_2
+│   │   ├── AZ12_f8GHz_m10dB_2
+│   │   ├── AZ12_f8GHz_m10dB_2repeat
+│   │   └── AZ12_f9GHz_m10dB_2repeat
+│   ├── AZ1_8-28-2025
+│   │   ├── AZ1_f10Ghz
+│   │   ├── AZ1_f11Ghz
+│   │   ├── AZ1_f12Ghz
+│   │   ├── AZ1_f13Ghz
+│   │   ├── AZ1_f14Ghz
+│   │   ├── AZ1_f15Ghz
+│   │   ├── AZ1_f16Ghz
+│   │   ├── AZ1_f17Ghz
+│   │   ├── AZ1_f4Ghz
+│   │   ├── AZ1_f5Ghz
+│   │   ├── AZ1_f6Ghz
+│   │   ├── AZ1_f7Ghz
+│   │   ├── AZ1_f8Ghz
+│   │   ├── AZ1_f9Ghz
+│   │   └── AZ1_f9Ghz_1
+│   ├── AZ2
+│   ├── AZ3
+│   │   ├── AZ2_f3GHz_0dB
+│   │   ├── AZ3_f3GHz_0dB
+│   │   ├── AZ3_f4GHz_0dB
+│   │   ├── AZ3_f5GHz_0dB
+│   │   ├── AZ3_f6GHz_0dB
+│   │   ├── Az3_f10GHz_10dB
+│   │   ├── Az3_f11GHz_10dB
+│   │   ├── Az3_f4.1GHz_0dB
+│   │   ├── Az3_f7GHz_0dB
+│   │   ├── Az3_f9.1GHz_0dB
+│   │   └── Az3_f9GHz_0dB
+│   ├── AZ4_Done
+│   │   ├── AZ4_f10GHz_m10dB
+│   │   ├── AZ4_f11GHz_m10dB
+│   │   ├── AZ4_f12GHz_m10dB
+│   │   ├── AZ4_f13GHz_m10dB
+│   │   ├── AZ4_f14GHz_m10dB
+│   │   ├── AZ4_f15GHz_m10dB
+│   │   ├── AZ4_f16GHz_m10dB
+│   │   ├── AZ4_f17GHz_m10dB
+│   │   ├── AZ4_f3GHz_m10dB
+│   │   ├── AZ4_f4GHz_m10dB
+│   │   ├── AZ4_f5GHz_m10dB
+│   │   ├── AZ4_f6GHz_m10dB
+│   │   ├── AZ4_f7GHz_m10dB
+│   │   ├── AZ4_f8GHz_m10dB
+│   │   └── AZ4_f9GHz_m10dB
+│   ├── AZ5_Done
+│   │   ├── AZ5___
+│   │   │   ├── AZ5_f10GHz_m10dB_2
+│   │   │   ├── AZ5_f11GHz_m10dB_2
+│   │   │   ├── AZ5_f12GHz_m10dB_2
+│   │   │   ├── AZ5_f13GHz_m10dB_2
+│   │   │   ├── AZ5_f14GHz_m10dB_2
+│   │   │   ├── AZ5_f15GHz_m10dB_2
+│   │   │   ├── AZ5_f16GHz_m10dB_2
+│   │   │   ├── AZ5_f17GHz_m10dB_2
+│   │   │   ├── AZ5_f3GHz_m10dB_2
+│   │   │   ├── AZ5_f4GHz_m10dB_2
+│   │   │   ├── AZ5_f5GHz_m10dB_2
+│   │   │   ├── AZ5_f6GHz_m10dB_2
+│   │   │   ├── AZ5_f7GHz_m10dB_2
+│   │   │   ├── AZ5_f8GHz_m10dB_2
+│   │   │   └── AZ5_f9GHz_m10dB_2
+│   │   ├── AZ5_f10GHz_m10dB_2.csv
+│   │   ├── AZ5_f11GHz_m10dB_2.csv
+│   │   ├── AZ5_f12GHz_m10dB_2.csv
+│   │   ├── AZ5_f13GHz_m10dB_2.csv
+│   │   ├── AZ5_f5GHz_m10dB_1_t2.csv
+│   │   ├── AZ5_f5GHz_m10dB_2.csv
+│   │   ├── AZ5_f5GHz_m20dB_1.txt
+│   │   ├── AZ5_f5GHz_m20dB_2.csv
+│   │   ├── AZ5_f5GHz_m30dB_2.csv
+│   │   ├── AZ5_f6GHz_m10dB_2.csv
+│   │   ├── AZ5_f7GHz_m10dB_2.csv
+│   │   ├── AZ5_f8GHz_m10dB_2.csv
+│   │   ├── AZ5_f9GHz_m10dB_2.csv
+│   │   └── AZ5_test
+│   │       ├── AZ5_f3GHz_m10dB
+│   │       ├── AZ5_f4GHz_m10dB
+│   │       ├── AZ5_f5GHz_m10dB
+│   │       ├── AZ5_f5GHz_m10dB_1
+│   │       ├── AZ5_f5GHz_m10dB_1_t0p5
+│   │       ├── AZ5_f5GHz_m10dB_1_t1
+│   │       ├── AZ5_f5GHz_m10dB_1_t2
+│   │       ├── AZ5_f5GHz_m10dB_1_t5
+│   │       ├── AZ5_f5GHz_m20dB
+│   │       ├── AZ5_f5GHz_m20dB_1
+│   │       ├── AZ5_f5GHz_m20dB_2
+│   │       ├── AZ5_f5GHz_m30dB_2
+│   │       ├── AZ5_f6GHz_m10dB
+│   │       ├── AZ5_f7GHz_m10dB
+│   │       ├── AZ5_f8GHz_m10dB
+│   │       └── AZ5_f9GHz_m10dB
+│   ├── AZ6_Done
+│   │   ├── Az1__1__9-`16-2025
+│   │   │   ├── Az6_f10GHz_0dB
+│   │   │   ├── Az6_f11GHz_0dB
+│   │   │   ├── Az6_f12GHz_0dB
+│   │   │   ├── Az6_f13GHz_0dB
+│   │   │   ├── Az6_f14GHz_0dB
+│   │   │   ├── Az6_f15GHz_0dB
+│   │   │   ├── Az6_f3GHz_0dB
+│   │   │   ├── Az6_f3GHz_0dB-repeat
+│   │   │   ├── Az6_f4GHz_0dB
+│   │   │   ├── Az6_f4GHz_0dB-repeat
+│   │   │   ├── Az6_f5GHz_0dB
+│   │   │   ├── Az6_f6GHz_0dB
+│   │   │   ├── Az6_f7GHz_0dB
+│   │   │   ├── Az6_f8GHz_0dB
+│   │   │   └── Az6_f9GHz_0dB
+│   │   └── Az1__2__9-`16-2025
+│   │       ├── AZ6_f10GHz_m10dB_2
+│   │       ├── AZ6_f11GHz_m10dB_2
+│   │       ├── AZ6_f12GHz_m10dB_2
+│   │       ├── AZ6_f13GHz_m10dB_2
+│   │       ├── AZ6_f14GHz_m10dB_2
+│   │       ├── AZ6_f15GHz_m10dB_2
+│   │       ├── AZ6_f16GHz_m10dB_2
+│   │       ├── AZ6_f4GHz_m10dB_2
+│   │       ├── AZ6_f5GHz_m10dB_2
+│   │       ├── AZ6_f6GHz_m10dB_2
+│   │       ├── AZ6_f7GHz_m10dB_2
+│   │       ├── AZ6_f8GHz_m10dB_2
+│   │       └── AZ6_f9GHz_m10dB_2
+│   ├── AZ7_Done_9-17-2025
+│   │   ├── Az7_f10GHz_-10dB_50_vpp2.5
+│   │   ├── Az7_f11GHz_-10dB_50_vpp2.5
+│   │   ├── Az7_f12GHz_-10dB_50_vpp2.5
+│   │   ├── Az7_f13GHz_-10dB_50_vpp2.5
+│   │   ├── Az7_f14GHz_-10dB_50_vpp2.5
+│   │   ├── Az7_f15GHz_-10dB_50_vpp2.5
+│   │   ├── Az7_f16GHz_-10dB_50_vpp2.5
+│   │   ├── Az7_f17GHz_-10dB_50_vpp2.5
+│   │   ├── Az7_f3GHz_-10dB_50_vpp2.5
+│   │   ├── Az7_f4GHz_-10dB_50_vpp2.5
+│   │   ├── Az7_f5GHz_-10dB_50_vpp2.5
+│   │   ├── Az7_f6GHz_-10dB_50_vpp2.5
+│   │   └── Az7_f7GHz_-10dB_50_vpp2.5
+│   ├── AZ8_Done_9-18-2025
+│   │   ├── Az8_f10GHz_-10dB_100_vpp2
+│   │   ├── Az8_f11GHz_-10dB_100_vpp2
+│   │   ├── Az8_f12GHz_-10dB_100_vpp2
+│   │   ├── Az8_f13GHz_-10dB_100_vpp2
+│   │   ├── Az8_f14GHz_-10dB_100_vpp2
+│   │   ├── Az8_f15GHz_-10dB_100_vpp2
+│   │   ├── Az8_f16GHz_-10dB_100_vpp2
+│   │   ├── Az8_f3GHz_-10dB_100_vpp2
+│   │   ├── Az8_f4GHz_-10dB_100_vpp2
+│   │   ├── Az8_f5GHz_-10dB_100_vpp2
+│   │   ├── Az8_f6GHz_-10dB_100_vpp2
+│   │   ├── Az8_f8GHz_-10dB_100_vpp2
+│   │   └── Az8_f9GHz_-10dB_100_vpp2.txt
+│   ├── AZ9_Done_10-8-2025
+│   │   ├── AZ9_f10_m10dB
+│   │   ├── AZ9_f10_m10dB-repeat
+│   │   ├── AZ9_f11_m10dB
+│   │   ├── AZ9_f12_m10dB
+│   │   ├── AZ9_f13_m10dB
+│   │   ├── AZ9_f14_m10dB
+│   │   ├── AZ9_f15_m10dB
+│   │   ├── AZ9_f16_m10dB
+│   │   ├── AZ9_f17_m10dB
+│   │   ├── AZ9_f3_m10dB
+│   │   ├── AZ9_f4_m10dB
+│   │   ├── AZ9_f5_m10dB
+│   │   ├── AZ9_f6_m10dB
+│   │   ├── AZ9_f7_m10dB
+│   │   ├── AZ9_f8_m10dB
+│   │   └── AZ9_f9_m10dB
+│   ├── YIG_Samples_AZ12_(02-10).opj
+│   ├── YIG_samples__.opj
+│   ├── measured_sample
+│   │   ├── AZ10_Final (7-10-25)
+│   │   │   ├── AZ10_f10GHz_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f11GHz_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f12GHz_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f13GHz_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f14GHz_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f15GHz_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f16GHz_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f17GHz_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f3_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f4GHz_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f5_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f6_m10dB_sens50_2.500Vpp_Final
+│   │   │   ├── AZ10_f7GHz_m10dB_sens200_3.00Vpp_final
+│   │   │   ├── AZ10_f8GHz_m10dB_sens50_2.500Vpp_Final
+│   │   │   └── AZ10_f9GHz_m10dB_sens50_2.500Vpp_Final
+│   │   ├── AZ11_scrchd
+│   │   │   ├── AZ11_f3GHz_m10dB
+│   │   │   └── AZ11_f3GHz_m10dB_2
+│   │   ├── AZ12_Final (29-09-25)
+│   │   │   ├── AZ12_f10GHz_m10dB_2repeat
+│   │   │   ├── AZ12_f11GHz_m10dB_2repeat
+│   │   │   ├── AZ12_f12GHz_m10dB_2repeat
+│   │   │   ├── AZ12_f13GHz_m10dB_2repeat
+│   │   │   ├── AZ12_f14GHz_m10dB_2repeat
+│   │   │   ├── AZ12_f15GHz_m10dB_2repeat
+│   │   │   ├── AZ12_f16GHz_m10dB_2repeat
+│   │   │   ├── AZ12_f17GHz_m10dB_2repeat
+│   │   │   ├── AZ12_f4GHz_m10dB_2
+│   │   │   ├── AZ12_f5GHz_m10dB_2
+│   │   │   ├── AZ12_f6GHz_m10dB_2
+│   │   │   ├── AZ12_f7GHz_m10dB_2
+│   │   │   ├── AZ12_f8GHz_m10dB_2
+│   │   │   ├── AZ12_f8GHz_m10dB_2repeat
+│   │   │   └── AZ12_f9GHz_m10dB_2repeat
+│   │   ├── AZ1_8-28-2025
+│   │   │   ├── AZ1_f10Ghz
+│   │   │   ├── AZ1_f11Ghz
+│   │   │   ├── AZ1_f12Ghz
+│   │   │   ├── AZ1_f13Ghz
+│   │   │   ├── AZ1_f14Ghz
+│   │   │   ├── AZ1_f15Ghz
+│   │   │   ├── AZ1_f16Ghz
+│   │   │   ├── AZ1_f17Ghz
+│   │   │   ├── AZ1_f4Ghz
+│   │   │   ├── AZ1_f5Ghz
+│   │   │   ├── AZ1_f6Ghz
+│   │   │   ├── AZ1_f7Ghz
+│   │   │   ├── AZ1_f8Ghz
+│   │   │   ├── AZ1_f9Ghz
+│   │   │   └── AZ1_f9Ghz_1
+│   │   ├── AZ2
+│   │   ├── AZ3
+│   │   │   ├── AZ2_f3GHz_0dB
+│   │   │   ├── AZ3_f3GHz_0dB
+│   │   │   ├── AZ3_f4GHz_0dB
+│   │   │   ├── AZ3_f5GHz_0dB
+│   │   │   ├── AZ3_f6GHz_0dB
+│   │   │   ├── Az3_f10GHz_10dB
+│   │   │   ├── Az3_f11GHz_10dB
+│   │   │   ├── Az3_f4.1GHz_0dB
+│   │   │   ├── Az3_f7GHz_0dB
+│   │   │   ├── Az3_f9.1GHz_0dB
+│   │   │   └── Az3_f9GHz_0dB
+│   │   ├── AZ4_Done
+│   │   │   ├── AZ4_f10GHz_m10dB
+│   │   │   ├── AZ4_f11GHz_m10dB
+│   │   │   ├── AZ4_f12GHz_m10dB
+│   │   │   ├── AZ4_f13GHz_m10dB
+│   │   │   ├── AZ4_f14GHz_m10dB
+│   │   │   ├── AZ4_f15GHz_m10dB
+│   │   │   ├── AZ4_f16GHz_m10dB
+│   │   │   ├── AZ4_f17GHz_m10dB
+│   │   │   ├── AZ4_f3GHz_m10dB
+│   │   │   ├── AZ4_f4GHz_m10dB
+│   │   │   ├── AZ4_f5GHz_m10dB
+│   │   │   ├── AZ4_f6GHz_m10dB
+│   │   │   ├── AZ4_f7GHz_m10dB
+│   │   │   ├── AZ4_f8GHz_m10dB
+│   │   │   └── AZ4_f9GHz_m10dB
+│   │   ├── AZ5_Done
+│   │   │   ├── AZ5_f10GHz_m10dB_2
+│   │   │   ├── AZ5_f11GHz_m10dB_2
+│   │   │   ├── AZ5_f12GHz_m10dB_2
+│   │   │   ├── AZ5_f13GHz_m10dB_2
+│   │   │   ├── AZ5_f14GHz_m10dB_2
+│   │   │   ├── AZ5_f15GHz_m10dB_2
+│   │   │   ├── AZ5_f16GHz_m10dB_2
+│   │   │   ├── AZ5_f17GHz_m10dB_2
+│   │   │   ├── AZ5_f3GHz_m10dB_2
+│   │   │   ├── AZ5_f4GHz_m10dB_2
+│   │   │   ├── AZ5_f5GHz_m10dB_2
+│   │   │   ├── AZ5_f6GHz_m10dB_2
+│   │   │   ├── AZ5_f7GHz_m10dB_2
+│   │   │   ├── AZ5_f8GHz_m10dB_2
+│   │   │   ├── AZ5_f9GHz_m10dB_2
+│   │   │   └── AZ5_test
+│   │   ├── AZ6_Done
+│   │   │   ├── Az1__1__9-`16-2025
+│   │   │   └── Az1__2__9-`16-2025
+│   │   ├── AZ7_Done_9-17-2025
+│   │   │   ├── Az7_f10GHz_-10dB_50_vpp2.5
+│   │   │   ├── Az7_f11GHz_-10dB_50_vpp2.5
+│   │   │   ├── Az7_f12GHz_-10dB_50_vpp2.5
+│   │   │   ├── Az7_f13GHz_-10dB_50_vpp2.5
+│   │   │   ├── Az7_f14GHz_-10dB_50_vpp2.5
+│   │   │   ├── Az7_f15GHz_-10dB_50_vpp2.5
+│   │   │   ├── Az7_f16GHz_-10dB_50_vpp2.5
+│   │   │   ├── Az7_f17GHz_-10dB_50_vpp2.5
+│   │   │   ├── Az7_f3GHz_-10dB_50_vpp2.5
+│   │   │   ├── Az7_f4GHz_-10dB_50_vpp2.5
+│   │   │   ├── Az7_f5GHz_-10dB_50_vpp2.5
+│   │   │   ├── Az7_f6GHz_-10dB_50_vpp2.5
+│   │   │   └── Az7_f7GHz_-10dB_50_vpp2.5
+│   │   ├── AZ8_Done_9-18-2025
+│   │   │   ├── Az8_f10GHz_-10dB_100_vpp2
+│   │   │   ├── Az8_f11GHz_-10dB_100_vpp2
+│   │   │   ├── Az8_f12GHz_-10dB_100_vpp2
+│   │   │   ├── Az8_f13GHz_-10dB_100_vpp2
+│   │   │   ├── Az8_f14GHz_-10dB_100_vpp2
+│   │   │   ├── Az8_f15GHz_-10dB_100_vpp2
+│   │   │   ├── Az8_f16GHz_-10dB_100_vpp2
+│   │   │   ├── Az8_f3GHz_-10dB_100_vpp2
+│   │   │   ├── Az8_f4GHz_-10dB_100_vpp2
+│   │   │   ├── Az8_f5GHz_-10dB_100_vpp2
+│   │   │   ├── Az8_f6GHz_-10dB_100_vpp2
+│   │   │   ├── Az8_f8GHz_-10dB_100_vpp2
+│   │   │   └── Az8_f9GHz_-10dB_100_vpp2.txt
+│   │   ├── AZ9_Done_10-8-2025
+│   │   │   ├── AZ9_f10_m10dB
+│   │   │   ├── AZ9_f10_m10dB-repeat
+│   │   │   ├── AZ9_f11_m10dB
+│   │   │   ├── AZ9_f12_m10dB
+│   │   │   ├── AZ9_f13_m10dB
+│   │   │   ├── AZ9_f14_m10dB
+│   │   │   ├── AZ9_f15_m10dB
+│   │   │   ├── AZ9_f16_m10dB
+│   │   │   ├── AZ9_f17_m10dB
+│   │   │   ├── AZ9_f3_m10dB
+│   │   │   ├── AZ9_f4_m10dB
+│   │   │   ├── AZ9_f5_m10dB
+│   │   │   ├── AZ9_f6_m10dB
+│   │   │   ├── AZ9_f7_m10dB
+│   │   │   ├── AZ9_f8_m10dB
+│   │   │   └── AZ9_f9_m10dB
+│   │   ├── YIG_Samples_AZ12_(02-10).opj
+│   │   ├── YIG_samples__.opj
+│   │   └── sample_state.txt.txt
+│   └── sample_state.txt.txt
+├── notebooks
+│   └── Notebook_interface.ipynb
+├── requirements.txt
+├── results_roots
+│   └── AZ5
+│       ├── AZ5_analysis.xlsx
+│       ├── AZ5_f10GHz_m10dB_2_fit.png
+│       ├── AZ5_f10GHz_m10dB_2_fit.svg
+│       ├── AZ5_f10GHz_m10dB_2_fit_results.csv
+│       ├── AZ5_f10GHz_m10dB_2_plot.png
+│       ├── AZ5_f10GHz_m10dB_2_processed.csv
+│       ├── AZ5_f11GHz_m10dB_2_fit.png
+│       ├── AZ5_f11GHz_m10dB_2_fit.svg
+│       ├── AZ5_f11GHz_m10dB_2_fit_results.csv
+│       ├── AZ5_f11GHz_m10dB_2_plot.png
+│       ├── AZ5_f11GHz_m10dB_2_processed.csv
+│       ├── AZ5_f12GHz_m10dB_2_fit.png
+│       ├── AZ5_f12GHz_m10dB_2_fit.svg
+│       ├── AZ5_f12GHz_m10dB_2_fit_results.csv
+│       ├── AZ5_f12GHz_m10dB_2_plot.png
+│       ├── AZ5_f12GHz_m10dB_2_processed.csv
+│       ├── AZ5_f13GHz_m10dB_2_fit.png
+│       ├── AZ5_f13GHz_m10dB_2_fit.svg
+│       ├── AZ5_f13GHz_m10dB_2_fit_results.csv
+│       ├── AZ5_f13GHz_m10dB_2_plot.png
+│       ├── AZ5_f13GHz_m10dB_2_processed.csv
+│       ├── AZ5_f5GHz_m10dB_1_t2_fit.png
+│       ├── AZ5_f5GHz_m10dB_1_t2_fit.svg
+│       ├── AZ5_f5GHz_m10dB_1_t2_fit_results.csv
+│       ├── AZ5_f5GHz_m10dB_1_t2_plot.png
+│       ├── AZ5_f5GHz_m10dB_1_t2_processed.csv
+│       ├── AZ5_f5GHz_m20dB_1_fit.png
+│       ├── AZ5_f5GHz_m20dB_1_fit.svg
+│       ├── AZ5_f5GHz_m20dB_1_fit_results.csv
+│       ├── AZ5_f5GHz_m20dB_1_plot.png
+│       ├── AZ5_f5GHz_m20dB_1_plot.svg
+│       ├── AZ5_f5GHz_m20dB_1_processed.csv
+│       ├── AZ5_f5GHz_m30dB_2_fit.png
+│       ├── AZ5_f5GHz_m30dB_2_fit.svg
+│       ├── AZ5_f5GHz_m30dB_2_fit_results.csv
+│       ├── AZ5_f5GHz_m30dB_2_plot.png
+│       ├── AZ5_f5GHz_m30dB_2_processed.csv
+│       ├── AZ5_f6GHz_m10dB_2_fit.png
+│       ├── AZ5_f6GHz_m10dB_2_fit.svg
+│       ├── AZ5_f6GHz_m10dB_2_fit_results.csv
+│       ├── AZ5_f6GHz_m10dB_2_plot.png
+│       ├── AZ5_f6GHz_m10dB_2_processed.csv
+│       ├── AZ5_f7GHz_m10dB_2_fit.png
+│       ├── AZ5_f7GHz_m10dB_2_fit.svg
+│       ├── AZ5_f7GHz_m10dB_2_fit_results.csv
+│       ├── AZ5_f7GHz_m10dB_2_plot.png
+│       ├── AZ5_f7GHz_m10dB_2_processed.csv
+│       ├── AZ5_f8GHz_m10dB_2_fit.png
+│       ├── AZ5_f8GHz_m10dB_2_fit.svg
+│       ├── AZ5_f8GHz_m10dB_2_fit_results.csv
+│       ├── AZ5_f8GHz_m10dB_2_plot.png
+│       ├── AZ5_f8GHz_m10dB_2_processed.csv
+│       ├── AZ5_f9GHz_m10dB_2_fit.png
+│       ├── AZ5_f9GHz_m10dB_2_fit.svg
+│       ├── AZ5_f9GHz_m10dB_2_fit_results.csv
+│       ├── AZ5_f9GHz_m10dB_2_plot.png
+│       ├── AZ5_f9GHz_m10dB_2_plot.svg
+│       ├── AZ5_f9GHz_m10dB_2_processed.csv
+│       ├── AZ5_fit.pptx
+│       └── AZ5_plots.pptx
+├── scripts
+│   ├── __pycache__
+│   │   ├── fit_spectrum.cpython-312.pyc
+│   │   ├── fit_spectrum.cpython-313.pyc
+│   │   ├── fit_spectrum2.cpython-312.pyc
+│   │   ├── fit_spectrum_Version2.cpython-312.pyc
+│   │   ├── loading_setup.cpython-312.pyc
+│   │   ├── notebook_utils_Version2.cpython-312.pyc
+│   │   └── plot_spectrum.cpython-312.pyc
+│   ├── automation.py
+│   ├── fit_spectrum.py
+│   ├── fit_spectrum2.py
+│   ├── fit_spectrum_Version2.py
+│   ├── fitting_models.md
+│   ├── loading_setup.py
+│   ├── notebook_utils_Version2.py
+│   ├── plot_spectrum.py
+│   ├── sss.md
+│   ├── suggest_pipline.md
+│   └── suggested_pipeline_Version11.md
+├── test
+│   ├── run_fit__spectrum.py
+│   ├── run_fit_spectrum.py
+│   ├── run_loading.py
+│   └── run_plot_spectrum.py
+├── tree.md
+└── tree.txt
+
+40 directories, 411 files

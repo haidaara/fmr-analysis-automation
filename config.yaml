@@ -1,8 +1,110 @@
-# FMR Analysis Automation Configuration
+# Configuration file for FMR fitting pipeline
+# -------------------------------------------
 
+# ---[ Input & File Selection ]---
+input_file: ""
 data_folder: "data"
+samples:
+  - AZ9
 results_root: "results_roots"
-samples: []           # Leave empty to process all samples, or specify: ["AZ5", ...]
-plot_format: "png"    # "png" or "svg"
-aggregate: "median"   # "mean" or "median" for plotting/aggregation
-fit_model: "double_asymmetric_lorentzian"  # Default fitting model
+
+# ---[ Model & Fitting ]---
+# Supported models ONLY: Lorentzain, aysmetric, double_lorentzain
+model: "double_lorentzain"
+
+# Bounds for fit parameters (only applied if provided and not null).
+parameter_bounds:
+  A1: null
+  B1: null
+  H01: null
+  dH1: null
+  A2: null
+  B2: null
+  H02: null
+  dH2: null
+  C: null
+  D: null
+
+# ---[ Preprocessing ]---
+aggregation: "median"
+preprocessing:
+  baseline_correction: false
+  smoothing:
+    method: "none"
+    window: 5
+
+# ---[ Plotting Options ]---
+plot:
+  plot_formats: ["png", "pdf"]    # Add "pdf" for vector publication, or "svg"
+  show_legend: true
+  font_scale: 1.2                 # Increase for bigger fonts (e.g., 1.2 or 1.4)
+  line_width: 2.5                 # Fit line thickness
+  marker_size: 6                  # Data point size
+  grid: true                      # Add grid lines for readability
+# plot:
+#   # File formats
+#   plot_formats: ["png", "svg"]
+#   show_legend: true
+
+#   # Presentation (simple knobs)
+#   figsize: [6.0, 3.6]      # inches
+#   dpi: 300
+#   font_scale: 1.0
+#   data_ms: 2.5
+#   fit_lw: 2.0
+#   data_color: "#4C78A8"
+#   fit_color: "#E45756"
+#   grid: false
+#   legend_loc: "best"
+
+#   # View control
+#   xlim_mode: "tight"       # "auto" shows full field; "tight" focuses around resonance(s)
+#   x_window_dH: 6.0         # half-width in units of dH for the tight view window
+
+#   # Extras
+#   show_residuals: false     # add a small residuals panel under the fit
+#   annotate_params: false    # small box with H0/dH values
+#   zero_line: true           # draw y=0 reference line
+#   tight_layout: true
+
+# ---[ Output & Reporting ]---
+output:
+  save_csv: true
+  return_dict: true
+  output_dir: ""
+
+# ---[ Diagnostics & Logging ]---
+save_residuals_plot: true
+report_fields: []
+log_level: INFO
+
+# ---[ Pipeline Control ]---
+override_config_with_args: true
+
+
+analysis:
+  input_table: ""   # leave blank to auto-detect per sample
+
+  columns:
+    f: "f"
+    H_res: "H_res"
+    H_res_err: "H_res_err"
+    Delta_H: "Delta_H"
+    Delta_H_err: "Delta_H_err"
+
+  units:
+    f: "GHz"
+    H: "T"
+
+  kittel:
+    gamma_over_2pi_init: null     # if null, estimate from high-field slope; else use value (GHz/T)
+    slope_fraction: 0.25          # fraction of highest H points used for the slope estimate
+    weighted: "auto"              # "auto" | true | false (auto uses H_res_err if available)
+
+  damping:
+    use_gamma_from_kittel: true
+    weighted: "auto"              # "auto" | true | false (auto uses Delta_H_err if available)
+
+  plot:
+    plot_formats: ["png"]
+    show_legend: true

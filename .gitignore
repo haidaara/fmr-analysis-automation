@@ -76,3 +76,7 @@ dmypy.json
 .coverage
 *.cover
 .hypothesis/
+
+# archive reports
+results_roots/archive/
+

@@ -18,20 +18,48 @@ def loading_setup(data_folder, results_root, sample, f, db=None, k=64.404, h0=7.
 
     Output file columns: current, H, dP/dH (comma separated)
     """
-    # Build pattern for glob
+    # Support both f{f} and f{f}GHz patterns, and handle both m{db}dB and {db}dB for negative/positive dB
+    patterns = []
+
+    # Frequency string as in filename: allow both with and without "GHz"
+    f_str = str(f)
+    f_str_no_trail = f_str.rstrip("GHz")
+    # db string with and without m (for minus)
+    db_abs = abs(db) if db is not None else None
+    db_prefix = "m" if db is not None and int(db) < 0 else ""
+
     if db is not None:
-        # If db is specified, only match files with that db value
-        pattern = f"{sample}_f{f}GHz_m{abs(db)}dB*"
+        # Try all 4 combinations
+        # 1. With GHz, with m
+        patterns.append(f"{sample}_f{f_str}GHz_{db_prefix}{db_abs}dB*")
+        # 2. With GHz, without m (if db positive)
+        if db_prefix == "":
+            patterns.append(f"{sample}_f{f_str}GHz_{db_abs}dB*")
+        # 3. Without GHz, with m
+        patterns.append(f"{sample}_f{f_str}_{db_prefix}{db_abs}dB*")
+        # 4. Without GHz, without m (if db positive)
+        if db_prefix == "":
+            patterns.append(f"{sample}_f{f_str}_{db_abs}dB*")
     else:
         # If db is not specified, match any dB value
-        pattern = f"{sample}_f{f}GHz_m*dB*"
+        patterns.append(f"{sample}_f{f_str}GHz_m*dB*")
+        patterns.append(f"{sample}_f{f_str}_m*dB*")
+        patterns.append(f"{sample}_f{f_str}GHz_*dB*")
+        patterns.append(f"{sample}_f{f_str}_*dB*")
 
     # Search for matching file(s)
-    search_pattern = os.path.join(data_folder, pattern + ".*")
-    matches = glob.glob(search_pattern)
+    matches = []
+    for pattern in patterns:
+        search_pattern = os.path.join(data_folder, pattern + ".*")
+        found = glob.glob(search_pattern)
+        if found:
+            matches = found
+            break
+
     if not matches:
-        # Only show the pattern, not the full path
-        raise FileNotFoundError(f"\n\nNo file found for pattern: {pattern}")
+        # Only show the patterns tried, not the full path
+        tried_patterns = "\n".join(patterns)
+        raise FileNotFoundError(f"\n\nNo file found for any of these patterns:\n{tried_patterns}")
 
     # Use the first match found
     data_path = matches[0]

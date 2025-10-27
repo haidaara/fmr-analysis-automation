@@ -1,0 +1,50 @@
+# Configuration file for FMR fitting pipeline
+
+# Path to the processed spectrum CSV file.
+# If left blank, the script will use the latest CSV in 'results_roots'.
+input_file: ""
+
+# Directory where results (plots, CSV) will be saved.
+results_root: "results_roots"
+
+# Data folder containing all raw/processed samples.
+data_folder: "data"
+
+# (Optional) List of sample names (or substrings) to process.
+# If empty or omitted, all samples found in the data_folder will be processed.
+samples: 
+  # - AZ5
+  - AZ4
+  # - AZ9
+  # - "some_substring"
+  # leave empty or comment out to process all samples
+
+# Model type: "single", "double", "triple", or "auto" (default: double)
+model: "double"
+
+# Aggregation method for preprocessing: "median", "mean", or "none"
+aggregation: "median"
+
+# Smoothing configuration (optional)
+smoothing:
+  method: "none"   # Options: "none", "gaussian", ...
+  window: 5        # If smoothing is used
+
+plot:
+  # How to plot the data: "curve" (lines) or "points" (scatter)
+  data_style: "points"
+  save_png: true
+  save_svg: true
+  show_residuals: true
+  show_legend: true
+  font_scale: 1.2
+
+output:
+  save_csv: true
+  return_dict: true
+
+parameter_bounds:
+  amplitude: [-1.0e10, 1.0e10]
+  center: [null, null]    # null means no bound
+  width: [1e-6, null]
+  asymmetry: [-1, 1]
