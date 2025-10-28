@@ -25,7 +25,7 @@ git pull origin main
 
 
 ```bash
-# Update your Bash shell to the latest version (Linux/macOS/WSL):
+# Update
 sudo apt-get update
 
 # Update pip and setuptools
@@ -55,6 +55,8 @@ The main pipeline is controlled by the `automation.py` script and the `config.ya
 
 ```bash
 python scripts/automation.py --config config.yaml
+# or just 
+python scripts/automation.py
 ```
 
 This will:
