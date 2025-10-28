@@ -29,23 +29,23 @@ def loading_setup(data_folder, results_root, sample, f, db=None, k=64.404, h0=7.
     db_prefix = "m" if db is not None and int(db) < 0 else ""
 
     if db is not None:
-        # Try all 4 combinations
-        # 1. With GHz, with m
-        patterns.append(f"{sample}_f{f_str}GHz_{db_prefix}{db_abs}dB*")
-        # 2. With GHz, without m (if db positive)
-        if db_prefix == "":
-            patterns.append(f"{sample}_f{f_str}GHz_{db_abs}dB*")
-        # 3. Without GHz, with m
-        patterns.append(f"{sample}_f{f_str}_{db_prefix}{db_abs}dB*")
-        # 4. Without GHz, without m (if db positive)
-        if db_prefix == "":
-            patterns.append(f"{sample}_f{f_str}_{db_abs}dB*")
-    else:
-        # If db is not specified, match any dB value
-        patterns.append(f"{sample}_f{f_str}GHz_m*dB*")
-        patterns.append(f"{sample}_f{f_str}_m*dB*")
-        patterns.append(f"{sample}_f{f_str}GHz_*dB*")
-        patterns.append(f"{sample}_f{f_str}_*dB*")
+      # Try all 4 combinations
+      # 1. With GHz, with m
+      patterns.append(f"{sample}_f{f_str}GHz_{db_prefix}{db_abs}dB*")
+      # 2. With GHz, without m (if db positive)
+      if db_prefix == "":
+          patterns.append(f"{sample}_f{f_str}GHz_{db_abs}dB*")
+      # 3. Without GHz, with m
+      patterns.append(f"{sample}_f{f_str}_{db_prefix}{db_abs}dB*")
+      # 4. Without GHz, without m (if db positive)
+      if db_prefix == "":
+          patterns.append(f"{sample}_f{f_str}_{db_abs}dB*")
+      # NEW precise (no 'f' in name): match exactly '{sample}_{f}GHz_{db}dB*'
+      patterns.append(f"{sample}_{f_str}GHz_{db_prefix}{db_abs}dB*")
+      # 5. Also support filenames like "{sample}_{number}GHz_{db}dB*" (e.g., AZ1_9GHz_0dBm)
+      patterns.append(f"{sample}_[0-9]*GHz_{db_prefix}{db_abs}dB*")
+      # 6. Allow ANY characters before "GHz" (e.g., decimals, negatives, etc.)
+      patterns.append(f"{sample}_*GHz_{db_prefix}{db_abs}dB*")
 
     # Search for matching file(s)
     matches = []

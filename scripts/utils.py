@@ -40,6 +40,7 @@ def simple_parse_filename(fname):
     sample = parts[0] if len(parts) > 0 else None
 
     freq_match = re.search(r'f(\d+\.?\d*)', fname_core)
+    if not freq_match: freq_match = re.search(r'_(\d+(?:\.\d+)?)G?Hz', fname_core, re.IGNORECASE) 
     freq = freq_match.group(1) if freq_match else None
 
     db = None

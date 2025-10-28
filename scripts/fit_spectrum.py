@@ -32,7 +32,7 @@ def load_config(yaml_path=None, cli_args=None):
     config.setdefault("aggregation", "median")
     if "plot" not in config or not isinstance(config.get("plot"), dict):
         config["plot"] = {}
-    config["plot"].setdefault("plot_formats", ["png"])
+    config["plot"].setdefault("plot_formats", ["png", "pdf"])
     if "output" not in config or not isinstance(config.get("output"), dict):
         config["output"] = {}
     config["output"].setdefault("save_csv", True)

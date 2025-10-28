@@ -1,33 +1,32 @@
-# Core Python scientific stack
-numpy
-scipy
-pandas
+# Core scientific stack
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7
 
-# Plotting
-matplotlib
+# Fitting
+lmfit>=1.2.2
 
-# Jupyter notebook support
-jupyter
-ipykernel
+# Config (YAML)
+pyyaml>=6.0
 
-# For exporting to Excel (used in your notebook description)
-openpyxl
-xlsxwriter
+# Excel I/O
+openpyxl>=3.1
+xlsxwriter>=3.1
 
-# For exporting and manipulating pptx files (merging plots to pptx)
-python-pptx
+# PowerPoint export
+python-pptx>=0.6.21
 
-# Optional: tqdm for progress bars during automation
-tqdm
+# ----------------------------
+# Optional (uncomment if needed)
+# ----------------------------
+# Jupyter & widgets (for notebooks in /notebooks)
+# jupyter
+# ipykernel
+# ipywidgets
 
-# Optional: YAML config support
-pyyaml
+# Progress bars during long runs
+# tqdm
 
-# Optional: Interactive widgets in notebooks (if needed)
-ipywidgets
-
-# If you use scikit-learn for fitting or metrics
-scikit-learn
-
-# For exporting and manipulating pptx files (merging plots to pptx)
-python-pptx
+# If you later add ML steps
+# scikit-learn

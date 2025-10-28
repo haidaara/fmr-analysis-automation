@@ -6,8 +6,9 @@ input_file: ""
 data_folder: "data"
 
 # comment to analyze all samples in data_folder 
-# samples:
-#   - AZ9
+samples:
+  - AZ3
+  - AZ1
 
 results_root: "results_roots"
 
@@ -38,7 +39,7 @@ preprocessing:
 
 # ---[ Plotting Options ]---
 plot:
-  plot_formats: ["png", "pdf"]    # Add "pdf" for vector publication, or "svg"
+  plot_formats: ["png"]       #["png", "pdf"] # Add "pdf" for vector publication, or "svg" 
   show_legend: true
   font_scale: 1.2                 # Increase for bigger fonts (e.g., 1.2 or 1.4)
   line_width: 2.5                 # Fit line thickness

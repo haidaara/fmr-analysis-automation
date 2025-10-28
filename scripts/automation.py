@@ -73,6 +73,7 @@ def create_sample_pptx(sample, results_root, plot_formats=["png"]):
     for fmt in formats:
         plot_files.extend(collect_plot_files(sample, results_root, [fmt]))
     plot_files = sorted(plot_files)
+    plot_files = sorted(plot_files, key=lambda p: float(simple_parse_filename(os.path.basename(p)).get('f') or 0))  # NEW: numeric order
 
     if not plot_files:
         logging.warning(f"No plot files found for {sample}")
@@ -118,6 +119,7 @@ def create_sample_fit_pptx(sample, results_root, plot_formats=["png"]):
     for fmt in formats:
         fit_plot_files.extend(collect_fit_plot_files(sample, results_root, [fmt]))
     fit_plot_files = sorted(fit_plot_files)
+    fit_plot_files = sorted(fit_plot_files, key=lambda p: float(simple_parse_filename(os.path.basename(p)).get('f') or 0))  # NEW: numeric order
 
     if not fit_plot_files:
         logging.warning(f"No fit plot files found for {sample}")
@@ -225,7 +227,7 @@ def main():
             seen_paths.add(meta['full_path'])
 
             logging.info(f"-> Processing: {meta['filename']}")
-            print(f"\t-> Processing: {meta['filename']}")
+            print()
 
             processed_path = loading_setup(
                 os.path.dirname(meta['full_path']),
